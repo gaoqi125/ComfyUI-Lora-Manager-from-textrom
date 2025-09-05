@@ -194,7 +194,7 @@
             "displayDensity": "Densidad de visualización",
             "displayDensityOptions": {
                 "default": "Predeterminado",
-                "medium": "Medio", 
+                "medium": "Medio",
                 "compact": "Compacto"
             },
             "displayDensityHelp": "Elige cuántas tarjetas mostrar por fila:",
@@ -231,7 +231,7 @@
             "templateOptions": {
                 "flatStructure": "Estructura plana",
                 "byBaseModel": "Por modelo base",
-                "byAuthor": "Por autor", 
+                "byAuthor": "Por autor",
                 "byFirstTag": "Por primera etiqueta",
                 "baseModelFirstTag": "Modelo base + primera etiqueta",
                 "baseModelAuthor": "Modelo base + autor",
@@ -241,7 +241,7 @@
             "customTemplatePlaceholder": "Introduce plantilla personalizada (ej., {base_model}/{author}/{first_tag})",
             "modelTypes": {
                 "lora": "LoRA",
-                "checkpoint": "Checkpoint", 
+                "checkpoint": "Checkpoint",
                 "embedding": "Embedding"
             },
             "baseModelPathMappings": "Mapeos de rutas de modelo base",
@@ -318,13 +318,14 @@
         "bulkOperations": {
             "selected": "{count} seleccionados",
             "selectedSuffix": "seleccionados",
-            "viewSelected": "Clic para ver elementos seleccionados",
-            "sendToWorkflow": "Enviar al flujo de trabajo",
-            "copyAll": "Copiar todo",
-            "refreshAll": "Actualizar todo",
-            "moveAll": "Mover todo",
-            "deleteAll": "Eliminar todo",
-            "clear": "Limpiar"
+            "viewSelected": "Ver seleccionados",
+            "addTags": "Añadir etiquetas a todos",
+            "setBaseModel": "Establecer modelo base para todos",
+            "copyAll": "Copiar toda la sintaxis",
+            "refreshAll": "Actualizar todos los metadatos",
+            "moveAll": "Mover todos a carpeta",
+            "deleteAll": "Eliminar todos los modelos",
+            "clear": "Limpiar selección"
         },
         "contextMenu": {
             "refreshMetadata": "Actualizar datos de Civitai",
@@ -571,6 +572,24 @@
             "message": "¿Estás seguro de que quieres eliminar todos los modelos seleccionados y sus archivos asociados?",
             "countMessage": "modelos serán eliminados permanentemente.",
             "action": "Eliminar todo"
+        },
+        "bulkAddTags": {
+            "title": "Añadir etiquetas a múltiples modelos",
+            "description": "Añadir etiquetas a",
+            "models": "modelos",
+            "tagsToAdd": "Etiquetas a añadir",
+            "placeholder": "Introduce una etiqueta y presiona Enter...",
+            "appendTags": "Añadir etiquetas",
+            "replaceTags": "Reemplazar etiquetas",
+            "saveChanges": "Guardar cambios"
+        },
+        "bulkBaseModel": {
+            "title": "Establecer modelo base para múltiples modelos",
+            "description": "Establecer modelo base para",
+            "models": "modelos",
+            "selectBaseModel": "Seleccionar modelo base",
+            "save": "Actualizar modelo base",
+            "cancel": "Cancelar"
         },
         "exampleAccess": {
             "title": "Imágenes de ejemplo locales",
@@ -972,12 +991,18 @@
             "deleteFailed": "Error: {error}",
             "deleteFailedGeneral": "Error al eliminar modelos",
             "selectedAdditional": "Seleccionados {count} {type}(s) adicionales",
+            "marqueeSelectionComplete": "Seleccionados {count} {type}(s) con selección de marco",
             "refreshMetadataFailed": "Error al actualizar metadatos",
             "nameCannotBeEmpty": "El nombre del modelo no puede estar vacío",
             "nameUpdatedSuccessfully": "Nombre del modelo actualizado exitosamente",
             "nameUpdateFailed": "Error al actualizar nombre del modelo",
             "baseModelUpdated": "Modelo base actualizado exitosamente",
             "baseModelUpdateFailed": "Error al actualizar modelo base",
+            "baseModelNotSelected": "Por favor selecciona un modelo base",
+            "bulkBaseModelUpdating": "Actualizando modelo base para {count} modelo(s)...",
+            "bulkBaseModelUpdateSuccess": "Modelo base actualizado exitosamente para {count} modelo(s)",
+            "bulkBaseModelUpdatePartial": "Actualizados {success} modelo(s), fallaron {failed} modelo(s)",
+            "bulkBaseModelUpdateFailed": "Error al actualizar el modelo base para los modelos seleccionados",
             "invalidCharactersRemoved": "Caracteres inválidos eliminados del nombre de archivo",
             "filenameCannotBeEmpty": "El nombre de archivo no puede estar vacío",
             "renameFailed": "Error al renombrar archivo: {message}",
@@ -987,7 +1012,14 @@
             "verificationAlreadyDone": "Este grupo ya ha sido verificado",
             "verificationCompleteMismatch": "Verificación completa. {count} archivo(s) tienen hashes reales diferentes.",
             "verificationCompleteSuccess": "Verificación completa. Todos los archivos son confirmados duplicados.",
-            "verificationFailed": "Error al verificar hashes: {message}"
+            "verificationFailed": "Error al verificar hashes: {message}",
+            "noTagsToAdd": "No hay etiquetas para añadir",
+            "tagsAddedSuccessfully": "Se añadieron exitosamente {tagCount} etiqueta(s) a {count} {type}(s)",
+            "tagsReplacedSuccessfully": "Se reemplazaron exitosamente las etiquetas de {count} {type}(s) con {tagCount} etiqueta(s)",
+            "tagsAddFailed": "Error al añadir etiquetas a {count} modelo(s)",
+            "tagsReplaceFailed": "Error al reemplazar etiquetas para {count} modelo(s)",
+            "bulkTagsAddFailed": "Error al añadir etiquetas a los modelos",
+            "bulkTagsReplaceFailed": "Error al reemplazar etiquetas para los modelos"
         },
         "search": {
             "atLeastOneOption": "Al menos una opción de búsqueda debe estar seleccionada"

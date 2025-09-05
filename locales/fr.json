@@ -194,7 +194,7 @@
             "displayDensity": "Densité d'affichage",
             "displayDensityOptions": {
                 "default": "Par défaut",
-                "medium": "Moyen", 
+                "medium": "Moyen",
                 "compact": "Compact"
             },
             "displayDensityHelp": "Choisissez combien de cartes afficher par ligne :",
@@ -231,7 +231,7 @@
             "templateOptions": {
                 "flatStructure": "Structure plate",
                 "byBaseModel": "Par modèle de base",
-                "byAuthor": "Par auteur", 
+                "byAuthor": "Par auteur",
                 "byFirstTag": "Par premier tag",
                 "baseModelFirstTag": "Modèle de base + Premier tag",
                 "baseModelAuthor": "Modèle de base + Auteur",
@@ -241,7 +241,7 @@
             "customTemplatePlaceholder": "Entrez un modèle personnalisé (ex: {base_model}/{author}/{first_tag})",
             "modelTypes": {
                 "lora": "LoRA",
-                "checkpoint": "Checkpoint", 
+                "checkpoint": "Checkpoint",
                 "embedding": "Embedding"
             },
             "baseModelPathMappings": "Mappages de chemin de modèle de base",
@@ -318,13 +318,14 @@
         "bulkOperations": {
             "selected": "{count} sélectionné(s)",
             "selectedSuffix": "sélectionné(s)",
-            "viewSelected": "Cliquez pour voir les éléments sélectionnés",
-            "sendToWorkflow": "Envoyer vers le workflow",
-            "copyAll": "Tout copier",
-            "refreshAll": "Tout actualiser",
-            "moveAll": "Tout déplacer",
-            "deleteAll": "Tout supprimer",
-            "clear": "Effacer"
+            "viewSelected": "Voir la sélection",
+            "addTags": "Ajouter des tags à tous",
+            "setBaseModel": "Définir le modèle de base pour tous",
+            "copyAll": "Copier toute la syntaxe",
+            "refreshAll": "Actualiser toutes les métadonnées",
+            "moveAll": "Déplacer tout vers un dossier",
+            "deleteAll": "Supprimer tous les modèles",
+            "clear": "Effacer la sélection"
         },
         "contextMenu": {
             "refreshMetadata": "Actualiser les données Civitai",
@@ -571,6 +572,24 @@
             "message": "Êtes-vous sûr de vouloir supprimer tous les modèles sélectionnés et leurs fichiers associés ?",
             "countMessage": "modèles seront définitivement supprimés.",
             "action": "Tout supprimer"
+        },
+        "bulkAddTags": {
+            "title": "Ajouter des tags à plusieurs modèles",
+            "description": "Ajouter des tags à",
+            "models": "modèles",
+            "tagsToAdd": "Tags à ajouter",
+            "placeholder": "Entrez un tag et appuyez sur Entrée...",
+            "appendTags": "Ajouter les tags",
+            "replaceTags": "Remplacer les tags",
+            "saveChanges": "Enregistrer les modifications"
+        },
+        "bulkBaseModel": {
+            "title": "Définir le modèle de base pour plusieurs modèles",
+            "description": "Définir le modèle de base pour",
+            "models": "modèles",
+            "selectBaseModel": "Sélectionner le modèle de base",
+            "save": "Mettre à jour le modèle de base",
+            "cancel": "Annuler"
         },
         "exampleAccess": {
             "title": "Images d'exemple locales",
@@ -972,12 +991,18 @@
             "deleteFailed": "Erreur : {error}",
             "deleteFailedGeneral": "Échec de la suppression des modèles",
             "selectedAdditional": "{count} {type}(s) supplémentaire(s) sélectionné(s)",
+            "marqueeSelectionComplete": "{count} {type}(s) sélectionné(s) avec la sélection par glisser-déposer",
             "refreshMetadataFailed": "Échec de l'actualisation des métadonnées",
             "nameCannotBeEmpty": "Le nom du modèle ne peut pas être vide",
             "nameUpdatedSuccessfully": "Nom du modèle mis à jour avec succès",
             "nameUpdateFailed": "Échec de la mise à jour du nom du modèle",
             "baseModelUpdated": "Modèle de base mis à jour avec succès",
             "baseModelUpdateFailed": "Échec de la mise à jour du modèle de base",
+            "baseModelNotSelected": "Veuillez sélectionner un modèle de base",
+            "bulkBaseModelUpdating": "Mise à jour du modèle de base pour {count} modèle(s)...",
+            "bulkBaseModelUpdateSuccess": "Modèle de base mis à jour avec succès pour {count} modèle(s)",
+            "bulkBaseModelUpdatePartial": "{success} modèle(s) mis à jour, {failed} modèle(s) en échec",
+            "bulkBaseModelUpdateFailed": "Échec de la mise à jour du modèle de base pour les modèles sélectionnés",
             "invalidCharactersRemoved": "Caractères invalides supprimés du nom de fichier",
             "filenameCannotBeEmpty": "Le nom de fichier ne peut pas être vide",
             "renameFailed": "Échec du renommage du fichier : {message}",
@@ -987,7 +1012,14 @@
             "verificationAlreadyDone": "Ce groupe a déjà été vérifié",
             "verificationCompleteMismatch": "Vérification terminée. {count} fichier(s) ont des hash différents.",
             "verificationCompleteSuccess": "Vérification terminée. Tous les fichiers sont confirmés comme doublons.",
-            "verificationFailed": "Échec de la vérification des hash : {message}"
+            "verificationFailed": "Échec de la vérification des hash : {message}",
+            "noTagsToAdd": "Aucun tag à ajouter",
+            "tagsAddedSuccessfully": "{tagCount} tag(s) ajouté(s) avec succès à {count} {type}(s)",
+            "tagsReplacedSuccessfully": "Tags remplacés avec succès pour {count} {type}(s) avec {tagCount} tag(s)",
+            "tagsAddFailed": "Échec de l'ajout des tags à {count} modèle(s)",
+            "tagsReplaceFailed": "Échec du remplacement des tags pour {count} modèle(s)",
+            "bulkTagsAddFailed": "Échec de l'ajout des tags aux modèles",
+            "bulkTagsReplaceFailed": "Échec du remplacement des tags pour les modèles"
         },
         "search": {
             "atLeastOneOption": "Au moins une option de recherche doit être sélectionnée"

@@ -318,13 +318,14 @@
         "bulkOperations": {
             "selected": "已选中 {count} 项",
             "selectedSuffix": "已选中",
-            "viewSelected": "点击查看已选项目",
-            "sendToWorkflow": "发送到工作流",
-            "copyAll": "全部复制",
-            "refreshAll": "全部刷新",
-            "moveAll": "全部移动",
-            "deleteAll": "全部删除",
-            "clear": "清除"
+            "viewSelected": "查看已选中",
+            "addTags": "为所有添加标签",
+            "setBaseModel": "为所有设置基础模型",
+            "copyAll": "复制全部语法",
+            "refreshAll": "刷新全部元数据",
+            "moveAll": "全部移动到文件夹",
+            "deleteAll": "删除所有模型",
+            "clear": "清除选择"
         },
         "contextMenu": {
             "refreshMetadata": "刷新 Civitai 数据",
@@ -571,6 +572,24 @@
             "message": "你确定要删除所有选中的模型及其相关文件吗？",
             "countMessage": "模型将被永久删除。",
             "action": "全部删除"
+        },
+        "bulkAddTags": {
+            "title": "批量添加标签",
+            "description": "为多个模型添加标签",
+            "models": "个模型",
+            "tagsToAdd": "要添加的标签",
+            "placeholder": "输入标签并按回车...",
+            "appendTags": "追加标签",
+            "replaceTags": "替换标签",
+            "saveChanges": "保存更改"
+        },
+        "bulkBaseModel": {
+            "title": "批量设置基础模型",
+            "description": "为多个模型设置基础模型",
+            "models": "个模型",
+            "selectBaseModel": "选择基础模型",
+            "save": "更新基础模型",
+            "cancel": "取消"
         },
         "exampleAccess": {
             "title": "本地示例图片",
@@ -972,12 +991,18 @@
             "deleteFailed": "错误：{error}",
             "deleteFailedGeneral": "删除模型失败",
             "selectedAdditional": "已选中 {count} 个额外 {type}",
+            "marqueeSelectionComplete": "框选已选中 {count} 个 {type}",
             "refreshMetadataFailed": "刷新元数据失败",
             "nameCannotBeEmpty": "模型名称不能为空",
             "nameUpdatedSuccessfully": "模型名称更新成功",
             "nameUpdateFailed": "模型名称更新失败",
             "baseModelUpdated": "基础模型更新成功",
             "baseModelUpdateFailed": "基础模型更新失败",
+            "baseModelNotSelected": "请选择基础模型",
+            "bulkBaseModelUpdating": "正在为 {count} 个模型更新基础模型...",
+            "bulkBaseModelUpdateSuccess": "成功为 {count} 个模型更新基础模型",
+            "bulkBaseModelUpdatePartial": "更新了 {success} 个模型，{failed} 个失败",
+            "bulkBaseModelUpdateFailed": "为选中模型更新基础模型失败",
             "invalidCharactersRemoved": "文件名中的无效字符已移除",
             "filenameCannotBeEmpty": "文件名不能为空",
             "renameFailed": "重命名文件失败：{message}",
@@ -987,7 +1012,14 @@
             "verificationAlreadyDone": "此组已验证过",
             "verificationCompleteMismatch": "验证完成。{count} 个文件实际哈希不同。",
             "verificationCompleteSuccess": "验证完成。所有文件均为重复项。",
-            "verificationFailed": "验证哈希失败：{message}"
+            "verificationFailed": "验证哈希失败：{message}",
+            "noTagsToAdd": "没有可添加的标签",
+            "tagsAddedSuccessfully": "已成功为 {count} 个 {type} 添加 {tagCount} 个标签",
+            "tagsReplacedSuccessfully": "已成功为 {count} 个 {type} 替换为 {tagCount} 个标签",
+            "tagsAddFailed": "为 {count} 个模型添加标签失败",
+            "tagsReplaceFailed": "为 {count} 个模型替换标签失败",
+            "bulkTagsAddFailed": "批量添加标签失败",
+            "bulkTagsReplaceFailed": "批量替换标签失败"
         },
         "search": {
             "atLeastOneOption": "至少选择一个搜索选项"

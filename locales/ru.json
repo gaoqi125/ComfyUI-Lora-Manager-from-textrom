@@ -194,7 +194,7 @@
             "displayDensity": "Плотность отображения",
             "displayDensityOptions": {
                 "default": "По умолчанию",
-                "medium": "Средняя", 
+                "medium": "Средняя",
                 "compact": "Компактная"
             },
             "displayDensityHelp": "Выберите количество карточек для отображения в ряду:",
@@ -231,7 +231,7 @@
             "templateOptions": {
                 "flatStructure": "Плоская структура",
                 "byBaseModel": "По базовой модели",
-                "byAuthor": "По автору", 
+                "byAuthor": "По автору",
                 "byFirstTag": "По первому тегу",
                 "baseModelFirstTag": "Базовая модель + Первый тег",
                 "baseModelAuthor": "Базовая модель + Автор",
@@ -241,7 +241,7 @@
             "customTemplatePlaceholder": "Введите пользовательский шаблон (например, {base_model}/{author}/{first_tag})",
             "modelTypes": {
                 "lora": "LoRA",
-                "checkpoint": "Checkpoint", 
+                "checkpoint": "Checkpoint",
                 "embedding": "Embedding"
             },
             "baseModelPathMappings": "Сопоставления путей базовых моделей",
@@ -318,13 +318,14 @@
         "bulkOperations": {
             "selected": "Выбрано {count}",
             "selectedSuffix": "выбрано",
-            "viewSelected": "Нажмите для просмотра выбранных элементов",
-            "sendToWorkflow": "Отправить в Workflow",
-            "copyAll": "Копировать все",
-            "refreshAll": "Обновить все",
-            "moveAll": "Переместить все",
-            "deleteAll": "Удалить все",
-            "clear": "Очистить"
+            "viewSelected": "Просмотреть выбранные",
+            "addTags": "Добавить теги ко всем",
+            "setBaseModel": "Установить базовую модель для всех",
+            "copyAll": "Копировать весь синтаксис",
+            "refreshAll": "Обновить все метаданные",
+            "moveAll": "Переместить все в папку",
+            "deleteAll": "Удалить все модели",
+            "clear": "Очистить выбор"
         },
         "contextMenu": {
             "refreshMetadata": "Обновить данные Civitai",
@@ -571,6 +572,24 @@
             "message": "Вы уверены, что хотите удалить все выбранные модели и связанные с ними файлы?",
             "countMessage": "моделей будут удалены навсегда.",
             "action": "Удалить все"
+        },
+        "bulkAddTags": {
+            "title": "Добавить теги к нескольким моделям",
+            "description": "Добавить теги к",
+            "models": "моделям",
+            "tagsToAdd": "Теги для добавления",
+            "placeholder": "Введите тег и нажмите Enter...",
+            "appendTags": "Добавить теги",
+            "replaceTags": "Заменить теги",
+            "saveChanges": "Сохранить изменения"
+        },
+        "bulkBaseModel": {
+            "title": "Установить базовую модель для нескольких моделей",
+            "description": "Установить базовую модель для",
+            "models": "моделей",
+            "selectBaseModel": "Выбрать базовую модель",
+            "save": "Обновить базовую модель",
+            "cancel": "Отмена"
         },
         "exampleAccess": {
             "title": "Локальные примеры изображений",
@@ -972,12 +991,18 @@
             "deleteFailed": "Ошибка: {error}",
             "deleteFailedGeneral": "Не удалось удалить модели",
             "selectedAdditional": "Выбрано дополнительно {count} {type}(ей)",
+            "marqueeSelectionComplete": "Выбрано {count} {type} с помощью выделения рамкой",
             "refreshMetadataFailed": "Не удалось обновить метаданные",
             "nameCannotBeEmpty": "Название модели не может быть пустым",
             "nameUpdatedSuccessfully": "Название модели успешно обновлено",
             "nameUpdateFailed": "Не удалось обновить название модели",
             "baseModelUpdated": "Базовая модель успешно обновлена",
             "baseModelUpdateFailed": "Не удалось обновить базовую модель",
+            "baseModelNotSelected": "Пожалуйста, выберите базовую модель",
+            "bulkBaseModelUpdating": "Обновление базовой модели для {count} моделей...",
+            "bulkBaseModelUpdateSuccess": "Базовая модель успешно обновлена для {count} моделей",
+            "bulkBaseModelUpdatePartial": "Обновлено {success} моделей, не удалось обновить {failed} моделей",
+            "bulkBaseModelUpdateFailed": "Не удалось обновить базовую модель для выбранных моделей",
             "invalidCharactersRemoved": "Недопустимые символы удалены из имени файла",
             "filenameCannotBeEmpty": "Имя файла не может быть пустым",
             "renameFailed": "Не удалось переименовать файл: {message}",
@@ -987,7 +1012,14 @@
             "verificationAlreadyDone": "Эта группа уже была проверена",
             "verificationCompleteMismatch": "Проверка завершена. {count} файл(ов) имеют разные фактические хеши.",
             "verificationCompleteSuccess": "Проверка завершена. Все файлы подтверждены как дубликаты.",
-            "verificationFailed": "Не удалось проверить хеши: {message}"
+            "verificationFailed": "Не удалось проверить хеши: {message}",
+            "noTagsToAdd": "Нет тегов для добавления",
+            "tagsAddedSuccessfully": "Успешно добавлено {tagCount} тег(ов) к {count} {type}(ам)",
+            "tagsReplacedSuccessfully": "Успешно заменены теги для {count} {type}(ов) на {tagCount} тег(ов)",
+            "tagsAddFailed": "Не удалось добавить теги к {count} модель(ям)",
+            "tagsReplaceFailed": "Не удалось заменить теги для {count} модель(ей)",
+            "bulkTagsAddFailed": "Не удалось добавить теги к моделям",
+            "bulkTagsReplaceFailed": "Не удалось заменить теги для моделей"
         },
         "search": {
             "atLeastOneOption": "Должен быть выбран хотя бы один вариант поиска"

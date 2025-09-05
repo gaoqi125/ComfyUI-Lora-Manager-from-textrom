@@ -15,6 +15,9 @@ import { initializeInfiniteScroll } from './utils/infiniteScroll.js';
 import { migrateStorageItems } from './utils/storageHelpers.js';
 import { i18n } from './i18n/index.js';
 import { onboardingManager } from './managers/OnboardingManager.js';
+import { BulkContextMenu } from './components/ContextMenu/BulkContextMenu.js';
+import { createPageContextMenu } from './components/ContextMenu/index.js';
+import { initializeEventManagement } from './utils/eventManagementInit.js';
 
 // Core application class
 export class AppCore {
@@ -55,6 +58,10 @@ export class AppCore {
         // Initialize the bulk manager
         bulkManager.initialize();
         
+        // Initialize bulk context menu
+        const bulkContextMenu = new BulkContextMenu();
+        bulkManager.setBulkContextMenu(bulkContextMenu);
+        
         // Initialize the example images manager
         exampleImagesManager.initialize();
         // Initialize the help manager
@@ -62,6 +69,8 @@ export class AppCore {
 
         const cardInfoDisplay = state.global.settings.cardInfoDisplay || 'always';
         document.body.classList.toggle('hover-reveal', cardInfoDisplay === 'hover');
+
+        initializeEventManagement();
         
         // Mark as initialized
         this.initialized = true;
@@ -88,12 +97,18 @@ export class AppCore {
     initializePageFeatures() {
         const pageType = this.getPageType();
         
-        // Initialize virtual scroll for pages that need it
         if (['loras', 'recipes', 'checkpoints', 'embeddings'].includes(pageType)) {
+            this.initializeContextMenus(pageType);
             initializeInfiniteScroll(pageType);
         }
         
         return this;
+    }
+    
+    // Initialize context menus for the current page
+    initializeContextMenus(pageType) {
+        // Create page-specific context menu
+        window.pageContextMenu = createPageContextMenu(pageType);
     }
 }
 
